@@ -4,10 +4,7 @@ const third = document.querySelector("#third");
 const btn = document.querySelector("#searchButton");
 const searchInput = document.querySelector("#cityInput");
 
-specialButton.addEventListener("click",checkFunctionality);
-
 async function checkFunctionality(string){
-    console.log("Ive been pressed ")
     const api_url =  await fetch(`/weather/${string}`);
     let use_data= await api_url.json();
     runFunction(use_data);
@@ -18,7 +15,6 @@ btn.addEventListener("click",updateDisplay);
 
 function updateDisplay(){
     let useText = searchInput.value;
-    console.log(searchInput.value);
     if(useText===""){
         alert("No text Detected");
 
@@ -68,23 +64,18 @@ function getWeekday(date){
 
 function removeChildren(){
     if(first.childElementCount>0){
-        console.log("here is our child",first.children[0])
         first.children[0].remove();
         second.children[0].remove();
         third.children[0].remove();
     }
-    else{
-        console.log("No children")
-    }
 }
 function runFunction(data){
-    console.log("Here iso our data",data)
     //check for children of the elements and delete them 
     removeChildren()
     
     let use_data = data;
     let days = use_data["daily"];
-    console.log(days);
+
 
     let counter = 0;
     Object.keys(days).forEach(key =>{
@@ -131,15 +122,12 @@ function runFunction(data){
         switch(counter){
             case 0:
                 first.append(container);
-                console.log("zero");
                 break;
             case 1:
                 second.append(container);
-                console.log("one");
                 break;
             case 2:
                 third.append(container);
-                 console.log("two");
                  break;
             }
         
@@ -148,12 +136,4 @@ function runFunction(data){
     });
 }
 
-
-
-
-
-
-
-
-//console.log(s)
 

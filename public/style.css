@@ -1,0 +1,65 @@
+html{
+    font-family: 'Titillium Web', sans-serif;
+    background-image: url("./City.jpg");
+    background-size: cover;
+    filter: brightness(80%);
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header{
+    text-align: center;
+    color: rgb(247, 242, 234);
+    backdrop-filter: blur(2px);
+
+
+    background-color: rgba(148, 120, 150, 0.37);
+
+}
+nav{
+    color: blanchedalmond;
+    background-color: rgba(148, 120, 150, 0.37);
+    text-align: center;
+
+}
+section{
+    border-radius: 3em;
+    display: flex;
+    height: 500px;
+    
+}
+@media only screen and (max-width: 1200px) {
+    section {
+        flex-direction: column;
+    }
+  }
+.searchBar{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    color: blanchedalmond;
+    background-color: rgba(20, 18, 18, 0.596);
+}
+.day{
+    display: flex;
+    backdrop-filter: blur(2px);
+    flex-grow: 1;
+    color: blanchedalmond;
+    border-radius: 0.5em;
+    margin: 2em;
+    background-color: rgba(20, 18, 18, 0.37);
+    text-align: center;
+}
+.innerHolder{
+    flex-grow: 1;
+    border-radius: 0.5em;
+    margin: 1em;
+    background-color: rgba(20, 18, 18, 0.596);
+    color:blanchedalmond;
+}

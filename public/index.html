@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+
+    <title>Weather Week</title>
+
+</head>
+
+<body>
+    
+    <header>
+        <h1>Three Day Forecast</h1>
+        <h3>Courtesy of the openweather api!</h3>
+    </header>
+
+    <nav>
+        <a href="https://johngoss725.github.io/"> Return Home</a>
+    </nav>
+    
+    <div class="searchBar">
+        <h2>Please Enter a City</h2>
+        <div class="inputHolder">
+        <input type="text" id="cityInput">
+        <button id="searchButton">Search City</button>
+        </div>
+    </div>
+    
+    
+    <section>
+        <div class="day">
+            <div class="innerHolder" id="first">
+            </div>
+        </div>
+        <div class="day" >
+            <div class="innerHolder" id="second">
+            </div>
+        </div>
+        <div class="day" >
+            <div class="innerHolder" id="third">
+            </div>
+        </div>
+    </section>
+    <button id="special">Press Me</body>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

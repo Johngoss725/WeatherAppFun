@@ -3,7 +3,6 @@ const second = document.querySelector("#second");
 const third = document.querySelector("#third");
 const btn = document.querySelector("#searchButton");
 const searchInput = document.querySelector("#cityInput");
-const specialButton=document.querySelector("#special");
 
 specialButton.addEventListener("click",checkFunctionality);
 
@@ -13,17 +12,9 @@ async function checkFunctionality(string){
     let use_data= await api_url.json();
     runFunction(use_data);
 }
-//require('dotenv').config();
-
 
 btn.addEventListener("click",updateDisplay);
 
-let key ="582a8318c4938c994e75733a88d81fc5";
-//let lon = "37.3";
-//let lat = "-77.5";
-
-//let url=`https://api.openweathermap.org/data/2.5/onecall?lat=${coords[1]}&lon=${coords[0]}&exclude=minutley,hourly,current,alerts&appid=${key}`
-let corArray=["",""];
 
 function updateDisplay(){
     let useText = searchInput.value;
